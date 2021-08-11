@@ -1,4 +1,4 @@
-import { useOrderBook } from "../hooks/useOrderBook.hook";
+import { useOrderBook } from "./useOrderBook.hook";
 
 export const OrderBook = () => {
     useOrderBook();

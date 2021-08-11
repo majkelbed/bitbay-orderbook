@@ -1,4 +1,4 @@
-import { OrderBook } from "../../../OrderBook/components/OrderBook.component";
+import { OrderBook } from "../OrderBook/OrderBook.component";
 
 export const App = () => {
     return (

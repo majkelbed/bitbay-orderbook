@@ -5,4 +5,6 @@ export async function useOrderBook() {
         method: 'GET'
     }).then(res => res.json());
     console.log(response);
+
+    return response;
 }
