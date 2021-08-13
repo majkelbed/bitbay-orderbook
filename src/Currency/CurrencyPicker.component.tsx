@@ -7,7 +7,9 @@ import currencyMock from './currencies.mock.json';
 const prepareCurrencyPairs = (): Currency[] => {
   const cryptoCurrencies = currencyMock.data.filter(({ type }) => type === 'crypto');
   const fiatCurrencies = currencyMock.data.filter(({ type }) => type === 'fiat');
-  const currencyPairs = cryptoCurrencies.flatMap(crypto => fiatCurrencies.map(fiat =>`${crypto.name.toUpperCase()}-${fiat.name.toUpperCase()}`));
+  const currencyPairs = cryptoCurrencies.flatMap(crypto => 
+    fiatCurrencies.map(fiat =>`${crypto.name.toUpperCase()}-${fiat.name.toUpperCase()}`)
+  );
 
   return currencyPairs;
 }
