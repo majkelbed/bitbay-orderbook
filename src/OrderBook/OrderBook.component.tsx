@@ -12,6 +12,8 @@ import { useOrderBook } from "./useOrderBook.hook";
 export const OrderBook = () => {
     const { buy, sell } = useOrderBook();
 
+    // Missing spread caused by lack of proper order (?) of order book orders, buy records are sorted in descending order in terms of "ra" and as API returns strings I assume it is not suposed to be mutable.
+
     return (
         <Flex>
             <Box>
