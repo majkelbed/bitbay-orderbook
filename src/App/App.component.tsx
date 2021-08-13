@@ -1,4 +1,4 @@
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { CurrencyPicker } from "../Currency/CurrencyPicker.component";
 import { OrderBook } from "../OrderBook/OrderBook.component";
 import { AppContextProvider } from "./useAppContext.hook";
