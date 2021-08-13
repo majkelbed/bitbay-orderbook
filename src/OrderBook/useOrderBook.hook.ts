@@ -39,6 +39,7 @@ export const useOrderBook = () => {
 
   const _webSocketPushHandler = (response: WebSocketPush<OrderBookChanges>) => {
     const { changes } = response.message;
+    // missing seqNo check for data consistency
 
     changes.forEach((change) => {
       const orderType: keyof OrderBook = change.entryType === "Sell" ? "sell" : "buy";

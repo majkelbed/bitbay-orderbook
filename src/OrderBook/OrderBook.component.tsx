@@ -15,6 +15,7 @@ export const OrderBook = () => {
             {buy.map(({ ra, ca, sa, pa, co }) => (
               <Tr key={ra}>
                 <Td isNumeric>{ra}</Td>
+                {/* not the same columns as mock, but front shouldn't do heavy calculations on prices, provided information isn't ready to be displayed */}
                 <Td display={{ base: "none", lg: "table-cell" }} isNumeric>
                   {ca}
                 </Td>
@@ -24,6 +25,7 @@ export const OrderBook = () => {
                 <Td display={{ base: "none", lg: "table-cell" }} isNumeric>
                   {pa}
                 </Td>
+                {/* --- */}
                 <Td isNumeric>{co}</Td>
               </Tr>
             ))}
@@ -31,6 +33,7 @@ export const OrderBook = () => {
         </Table>
       </Box>
       
+      {/* later can be turned into one UI component i.e OrdersTable*/}
       <Box>
         <Text align="center">Sell</Text>
         <Table size="sm">
@@ -53,6 +56,7 @@ export const OrderBook = () => {
           </Tbody>
         </Table>
       </Box>
+      {/* --- */}
     </Flex>
   );
 };
